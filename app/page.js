@@ -58,8 +58,8 @@ export default function HomePage() {
           style={{
             maxWidth: '1160px',
             margin: '0 auto',
-            padding: '0 40px',
-            paddingTop: '180px',
+            padding: '0 clamp(20px, 5vw, 40px)',
+            paddingTop: 'clamp(120px, 20vw, 180px)',
             paddingBottom: '140px',
             position: 'relative',
             zIndex: 1,
@@ -89,7 +89,7 @@ export default function HomePage() {
           {/* Headline */}
           <h1
             style={{
-              fontSize: 'clamp(48px, 6vw, 96px)',
+              fontSize: 'clamp(36px, 8vw, 96px)',
               fontWeight: '700',
               letterSpacing: '-0.03em',
               color: '#ffffff',
@@ -105,7 +105,7 @@ export default function HomePage() {
           {/* Subheadline */}
           <p
             style={{
-              fontSize: '18px',
+              fontSize: 'clamp(15px, 4vw, 18px)',
               color: '#c8cdd8',
               maxWidth: '480px',
               lineHeight: '1.7',
@@ -123,7 +123,8 @@ export default function HomePage() {
               style={{
                 backgroundColor: '#c9a84c',
                 color: '#080e1a',
-                padding: '13px 28px',
+                padding: 'clamp(10px, 3vw, 13px) clamp(16px, 4vw, 28px)',
+                whiteSpace: 'nowrap',
                 fontSize: '13px',
                 fontWeight: '500',
                 letterSpacing: '0.04em',
@@ -149,7 +150,8 @@ export default function HomePage() {
               style={{
                 backgroundColor: 'transparent',
                 color: '#e8eaf0',
-                padding: '13px 28px',
+                padding: 'clamp(10px, 3vw, 13px) clamp(16px, 4vw, 28px)',
+                whiteSpace: 'nowrap',
                 fontSize: '13px',
                 border: '1px solid rgba(255,255,255,0.06)',
                 borderRadius: '3px',
@@ -169,8 +171,9 @@ export default function HomePage() {
               borderTop: '1px solid rgba(255,255,255,0.06)',
               display: 'flex',
               alignItems: 'center',
-              gap: '40px',
-              flexWrap: 'wrap',
+              gap: '24px',
+              flexWrap: 'nowrap',
+              overflowX: 'auto',
             }}
           >
             {stats.flatMap((s, i) => {

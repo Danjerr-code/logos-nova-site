@@ -52,7 +52,7 @@ export default function ServicesPage() {
           <h1
             style={{
               fontFamily: "'Space Grotesk', sans-serif",
-              fontSize: 'clamp(36px, 5vw, 72px)',
+              fontSize: 'clamp(28px, 6vw, 56px)',
               fontWeight: '700',
               letterSpacing: '-0.03em',
               color: '#ffffff',

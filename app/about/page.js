@@ -19,7 +19,7 @@ export default function AboutPage() {
           style={{
             maxWidth: '1160px',
             margin: '0 auto',
-            padding: '0 40px',
+            padding: '0 clamp(20px, 5vw, 40px)',
             borderLeft: '3px solid #c9a84c',
             paddingLeft: '32px',
           }}
@@ -42,7 +42,7 @@ export default function AboutPage() {
           <p
             style={{
               fontFamily: "'Space Grotesk', sans-serif",
-              fontSize: 'clamp(48px, 6vw, 88px)',
+              fontSize: 'clamp(28px, 6vw, 88px)',
               fontWeight: '700',
               letterSpacing: '-0.03em',
               color: '#ffffff',
@@ -57,7 +57,7 @@ export default function AboutPage() {
           <p
             style={{
               fontFamily: "'Space Grotesk', sans-serif",
-              fontSize: 'clamp(36px, 4.5vw, 72px)',
+              fontSize: 'clamp(24px, 5vw, 72px)',
               fontWeight: '700',
               letterSpacing: '-0.03em',
               color: '#ffffff',
@@ -97,10 +97,11 @@ export default function AboutPage() {
             margin: '0 auto',
             padding: '0 40px',
             display: 'flex',
+            flexDirection: 'row',
             justifyContent: 'center',
             alignItems: 'flex-start',
-            gap: '80px',
-            flexWrap: 'wrap',
+            gap: '40px',
+            flexWrap: 'nowrap',
           }}
         >
           {/* Cornell */}
@@ -161,11 +162,12 @@ export default function AboutPage() {
           style={{
             maxWidth: '1160px',
             margin: '0 auto',
-            padding: '0 40px',
+            padding: '0 clamp(20px, 5vw, 40px)',
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
             flexWrap: 'wrap',
+            gap: '12px',
           }}
         >
           {credentials.flatMap((c, i) => {
@@ -173,7 +175,7 @@ export default function AboutPage() {
               <span
                 key={c.label}
                 style={{
-                  fontSize: '11px',
+                  fontSize: 'clamp(10px, 2.5vw, 11px)',
                   fontWeight: '500',
                   letterSpacing: '0.1em',
                   textTransform: 'uppercase',
@@ -196,7 +198,7 @@ export default function AboutPage() {
                     backgroundColor: '#c9a84c',
                     opacity: 0.6,
                     flexShrink: 0,
-                    margin: '0 28px',
+                    margin: '0 clamp(8px, 3vw, 28px)',
                   }}
                 />,
               ];

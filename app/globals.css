@@ -70,6 +70,19 @@ a {
   background: rgba(255, 255, 255, 0.06);
 }
 
+@media (max-width: 768px) {
+  .desktop-only {
+    display: none !important;
+  }
+  .contact-form-col {
+    width: 100% !important;
+    flex: none !important;
+  }
+  .contact-layout {
+    flex-direction: column !important;
+  }
+}
+
 .btn-gold {
   transition: all 0.2s ease;
 }

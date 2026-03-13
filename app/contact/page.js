@@ -36,10 +36,10 @@ export default function ContactPage() {
         </h1>
 
         {/* Two-column layout */}
-        <div style={{ display: 'flex', gap: '0', flexWrap: 'wrap', alignItems: 'flex-start' }}>
+        <div className="contact-layout" style={{ display: 'flex', gap: '0', flexWrap: 'wrap', alignItems: 'flex-start' }}>
 
           {/* Left: Form — 60% */}
-          <div style={{ flex: '0 0 60%', minWidth: '280px' }}>
+          <div className="contact-form-col" style={{ flex: '0 0 60%', minWidth: '280px' }}>
             {submitted ? (
               <p style={{ fontSize: '18px', color: '#c9a84c', fontFamily: "'Space Grotesk', sans-serif", fontWeight: '500' }}>
                 Thank you. We&apos;ll be in touch within 24 hours.
@@ -105,7 +105,7 @@ export default function ContactPage() {
           </div>
 
           {/* Right: Text — 40% */}
-          <div style={{ flex: '0 0 40%', minWidth: '240px', paddingLeft: '80px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+          <div className="desktop-only" style={{ flex: '0 0 40%', minWidth: '240px', paddingLeft: '80px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
             <p style={{ color: '#ffffff', fontSize: '18px', lineHeight: '1.5', marginBottom: '12px' }}>Federal and commercial engagements welcome.</p>
             <p style={{ color: '#ffffff', fontSize: '18px', lineHeight: '1.5', marginBottom: '12px' }}>SDVOSB set-aside opportunities prioritized.</p>
             <p style={{ color: '#ffffff', fontSize: '18px', lineHeight: '1.5', marginBottom: '12px' }}>Response within 24 hours.</p>
