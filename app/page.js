@@ -32,9 +32,9 @@ const capabilities = [
 ];
 
 const stats = [
-  { label: 'SDVOSB Certified' },
   { label: 'Veteran Owned' },
   { label: 'Federal + Commercial' },
+  { label: 'SDVOSB Certified' },
 ];
 
 export default function HomePage() {
@@ -70,7 +70,7 @@ export default function HomePage() {
           }}
         >
           {/* Left column — 55% */}
-          <div style={{ flex: '0 0 55%', minWidth: 0 }}>
+          <div style={{ flex: '0 0 58%', minWidth: 0 }}>
 
           {/* Label */}
           <p
@@ -89,7 +89,7 @@ export default function HomePage() {
           {/* Headline */}
           <h1
             style={{
-              fontSize: 'clamp(64px, 8vw, 120px)',
+              fontSize: 'clamp(48px, 6vw, 96px)',
               fontWeight: '700',
               letterSpacing: '-0.03em',
               color: '#ffffff',
@@ -214,7 +214,7 @@ export default function HomePage() {
           <div
             className="hidden md:flex"
             style={{
-              flex: '0 0 45%',
+              flex: '0 0 42%',
               alignItems: 'center',
               justifyContent: 'center',
             }}

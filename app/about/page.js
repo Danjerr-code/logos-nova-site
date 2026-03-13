@@ -112,28 +112,8 @@ export default function AboutPage() {
               gap: '16px',
             }}
           >
-            <div
-              style={{
-                width: '80px',
-                height: '80px',
-                borderRadius: '50%',
-                border: '2px solid #b31b1b',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-              }}
-            >
-              <span
-                style={{
-                  fontFamily: "'Space Grotesk', sans-serif",
-                  fontSize: '36px',
-                  fontWeight: '700',
-                  color: '#b31b1b',
-                  lineHeight: 1,
-                }}
-              >
-                C
-              </span>
+            <div style={{ width: '80px', height: '80px', borderRadius: '50%', border: '2px solid #b31b1b', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <span style={{ color: '#b31b1b', fontSize: '28px', fontWeight: '700', fontFamily: 'Space Grotesk' }}>C</span>
             </div>
             <p
               style={{
@@ -157,29 +137,8 @@ export default function AboutPage() {
               gap: '16px',
             }}
           >
-            <div
-              style={{
-                width: '80px',
-                height: '80px',
-                borderRadius: '50%',
-                border: '2px solid rgba(201, 168, 76, 0.5)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-              }}
-            >
-              <span
-                style={{
-                  fontFamily: "'Space Grotesk', sans-serif",
-                  fontSize: '14px',
-                  fontWeight: '700',
-                  color: '#c9a84c',
-                  letterSpacing: '0.06em',
-                  lineHeight: 1,
-                }}
-              >
-                USMC
-              </span>
+            <div style={{ width: '80px', height: '80px', borderRadius: '50%', border: '2px solid #c9a84c', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <span style={{ color: '#c9a84c', fontSize: '14px', fontWeight: '700', fontFamily: 'Space Grotesk', letterSpacing: '0.05em' }}>USMC</span>
             </div>
             <p
               style={{

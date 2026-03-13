@@ -50,19 +50,21 @@ export default function RootLayout({ children }) {
             }}
           >
             {/* Logo lockup */}
-            <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-              <Logo size={24} />
-              <span
-                style={{
-                  fontFamily: "'Space Grotesk', sans-serif",
-                  fontSize: '12px',
-                  fontWeight: '500',
-                  letterSpacing: '0.1em',
-                  color: '#ffffff',
-                }}
-              >
-                LOGOS NOVA
-              </span>
+            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                <Logo size={24} />
+                <span
+                  style={{
+                    fontFamily: "'Space Grotesk', sans-serif",
+                    fontSize: '12px',
+                    fontWeight: '500',
+                    letterSpacing: '0.1em',
+                    color: '#ffffff',
+                  }}
+                >
+                  LOGOS NOVA
+                </span>
+              </div>
             </div>
             <p style={{ fontSize: '12px', color: '#9aa0b0', lineHeight: '1.6', marginTop: '16px' }}>
               AI automation consulting for federal and commercial clients.
@@ -85,27 +87,22 @@ export default function RootLayout({ children }) {
             </div>
           </div>
 
-          {/* Bottom row */}
-          <div
+          {/* Copyright */}
+          <p
             style={{
-              maxWidth: '1160px',
-              margin: '0 auto',
-              padding: '20px 40px 32px',
-              display: 'flex',
-              justifyContent: 'space-between',
-              alignItems: 'center',
+              color: 'rgba(255,255,255,0.25)',
+              fontSize: '12px',
+              textAlign: 'center',
+              marginTop: '24px',
+              paddingTop: '24px',
               borderTop: '1px solid rgba(255,255,255,0.06)',
-              flexWrap: 'wrap',
-              gap: '8px',
+              maxWidth: '1160px',
+              margin: '24px auto 0',
+              padding: '24px 40px 32px',
             }}
           >
-            <p style={{ fontSize: '11px', color: '#4a5568' }}>
-              © 2025 Logos Nova LLC. All rights reserved.
-            </p>
-            <p style={{ fontSize: '11px', color: '#4a5568', letterSpacing: '0.06em' }}>
-              SDVOSB CERTIFIED
-            </p>
-          </div>
+            © 2026 Logos Nova LLC. All rights reserved.
+          </p>
         </footer>
       </body>
     </html>
