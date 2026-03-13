@@ -1,72 +1,249 @@
 const credentials = [
-  'Cornell MBA | Corporate Finance',
-  'Marine Corps Veteran | 2011–2017',
-  'Project Management Professional (PMP)',
-  'Lean Six Sigma Black Belt',
-  'Certified Scrum Master (CSM)',
-  'Google Advanced Data Analytics',
-  'UPenn AI for Business',
-  'SDVOSB Certified',
+  { label: 'Cornell MBA' },
+  { label: 'Marine Corps Veteran' },
+  { label: 'PMP' },
+  { label: 'SDVOSB Certified' },
 ];
 
 export default function AboutPage() {
   return (
     <>
-      {/* Founder Bio */}
-      <section className="bg-navy text-white py-24 px-6">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold mb-8">
-            Built by a Veteran.{' '}
-            <span className="text-gold">Powered by AI.</span>
-          </h1>
-          <div className="space-y-6 text-white/80 leading-relaxed text-lg">
-            <p>
-              Danjerr Presson is the founder of Logos Nova LLC, a
-              Service-Disabled Veteran-Owned Small Business based in Austin,
-              Texas. A Marine Corps veteran with six years of service
-              (2011–2017), Danjerr brings operational discipline and
-              mission-driven focus to every client engagement.
-            </p>
-            <p>
-              After the Marine Corps, he earned his MBA from Cornell University
-              with a concentration in Corporate Finance, and went on to serve as
-              a Finance Manager at Johnson &amp; Johnson supporting a $40 billion
-              divestiture. He founded Logos Nova to apply enterprise-grade
-              strategic thinking and cutting-edge AI automation to the problems
-              that matter most — for both federal agencies and commercial clients
-              ready to modernize.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Credentials */}
-      <section className="bg-light py-20 px-6">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-navy text-2xl font-bold mb-10 text-center">
-            Credentials &amp; Certifications
-          </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {credentials.map((c) => (
-              <div
-                key={c}
-                className="bg-white border border-gold rounded-lg p-5 text-center text-navy text-sm font-medium shadow-sm"
-              >
-                {c}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Mission */}
-      <section className="bg-navy py-20 px-6">
-        <div className="max-w-3xl mx-auto text-center">
-          <p className="text-gold text-xl md:text-2xl font-semibold leading-relaxed italic">
-            &ldquo;Our north star is building AI-powered systems that give
-            organizations an unfair advantage — faster decisions, leaner
-            operations, and the ability to do more with less.&rdquo;
+      {/* ── SECTION 1: HERO ──────────────────────────────────── */}
+      <section
+        style={{
+          background: 'linear-gradient(180deg, #0d1829 0%, #080e1a 60%)',
+          padding: '120px 0 100px',
+        }}
+      >
+        <div
+          style={{
+            maxWidth: '1160px',
+            margin: '0 auto',
+            padding: '0 40px',
+            borderLeft: '3px solid #c9a84c',
+            paddingLeft: '32px',
+          }}
+        >
+          {/* Eyebrow */}
+          <p
+            style={{
+              fontSize: '11px',
+              fontWeight: '500',
+              letterSpacing: '0.12em',
+              textTransform: 'uppercase',
+              color: '#c9a84c',
+              marginBottom: '20px',
+            }}
+          >
+            About
           </p>
+
+          {/* Headline line 1 */}
+          <p
+            style={{
+              fontFamily: "'Space Grotesk', sans-serif",
+              fontSize: 'clamp(48px, 6vw, 88px)',
+              fontWeight: '700',
+              letterSpacing: '-0.03em',
+              color: '#ffffff',
+              lineHeight: '1.1',
+              marginBottom: '24px',
+            }}
+          >
+            AI is the most powerful force multiplier of our era.
+          </p>
+
+          {/* Headline line 2 */}
+          <p
+            style={{
+              fontFamily: "'Space Grotesk', sans-serif",
+              fontSize: 'clamp(36px, 4.5vw, 72px)',
+              fontWeight: '700',
+              letterSpacing: '-0.03em',
+              color: '#ffffff',
+              lineHeight: '1.1',
+              marginBottom: '36px',
+            }}
+          >
+            We help organizations use it.
+          </p>
+
+          {/* Subline */}
+          <p
+            style={{
+              fontSize: '18px',
+              color: '#9aa0b0',
+              lineHeight: '1.6',
+            }}
+          >
+            Founded by a Marine Corps veteran and Cornell MBA with Fortune 50
+            management experience.
+          </p>
+        </div>
+      </section>
+
+      {/* ── SECTION 2: TRUST MARKS ───────────────────────────── */}
+      <section
+        style={{
+          backgroundColor: '#0a1220',
+          borderTop: '1px solid rgba(201, 168, 76, 0.2)',
+          borderBottom: '1px solid rgba(201, 168, 76, 0.2)',
+          padding: '80px 0',
+        }}
+      >
+        <div
+          style={{
+            maxWidth: '1160px',
+            margin: '0 auto',
+            padding: '0 40px',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'flex-start',
+            gap: '80px',
+            flexWrap: 'wrap',
+          }}
+        >
+          {/* Cornell */}
+          <div
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              gap: '16px',
+            }}
+          >
+            <div
+              style={{
+                width: '80px',
+                height: '80px',
+                borderRadius: '50%',
+                border: '2px solid #b31b1b',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}
+            >
+              <span
+                style={{
+                  fontFamily: "'Space Grotesk', sans-serif",
+                  fontSize: '36px',
+                  fontWeight: '700',
+                  color: '#b31b1b',
+                  lineHeight: 1,
+                }}
+              >
+                C
+              </span>
+            </div>
+            <p
+              style={{
+                fontSize: '10px',
+                fontWeight: '500',
+                letterSpacing: '0.14em',
+                textTransform: 'uppercase',
+                color: '#9aa0b0',
+              }}
+            >
+              Cornell University
+            </p>
+          </div>
+
+          {/* USMC */}
+          <div
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              gap: '16px',
+            }}
+          >
+            <div
+              style={{
+                width: '80px',
+                height: '80px',
+                borderRadius: '50%',
+                border: '2px solid rgba(201, 168, 76, 0.5)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}
+            >
+              <span
+                style={{
+                  fontFamily: "'Space Grotesk', sans-serif",
+                  fontSize: '14px',
+                  fontWeight: '700',
+                  color: '#c9a84c',
+                  letterSpacing: '0.06em',
+                  lineHeight: 1,
+                }}
+              >
+                USMC
+              </span>
+            </div>
+            <p
+              style={{
+                fontSize: '10px',
+                fontWeight: '500',
+                letterSpacing: '0.14em',
+                textTransform: 'uppercase',
+                color: '#9aa0b0',
+              }}
+            >
+              U.S. Marine Corps
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ── SECTION 3: CREDENTIALS ───────────────────────────── */}
+      <section style={{ backgroundColor: '#080e1a', padding: '80px 0' }}>
+        <div
+          style={{
+            maxWidth: '1160px',
+            margin: '0 auto',
+            padding: '0 40px',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            flexWrap: 'wrap',
+          }}
+        >
+          {credentials.flatMap((c, i) => {
+            const tag = (
+              <span
+                key={c.label}
+                style={{
+                  fontSize: '11px',
+                  fontWeight: '500',
+                  letterSpacing: '0.1em',
+                  textTransform: 'uppercase',
+                  color: '#9aa0b0',
+                }}
+              >
+                {c.label}
+              </span>
+            );
+            if (i < credentials.length - 1) {
+              return [
+                tag,
+                <span
+                  key={c.label + '-sep'}
+                  style={{
+                    display: 'inline-block',
+                    width: '4px',
+                    height: '4px',
+                    borderRadius: '50%',
+                    backgroundColor: '#c9a84c',
+                    opacity: 0.6,
+                    flexShrink: 0,
+                    margin: '0 28px',
+                  }}
+                />,
+              ];
+            }
+            return [tag];
+          })}
         </div>
       </section>
     </>

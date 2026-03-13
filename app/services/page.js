@@ -1,61 +1,194 @@
+'use client';
+
 import Link from 'next/link';
 
 const services = [
   {
-    title: 'AI Readiness Assessment and Implementation Roadmapping',
-    body: 'We evaluate your data infrastructure, process maturity, and technical readiness to produce a prioritized AI implementation roadmap your team can act on immediately.',
+    num: '01',
+    name: 'AI Readiness Assessment',
+    desc: 'We evaluate your data infrastructure, process maturity, and technical readiness to produce a prioritized AI implementation roadmap your team can act on immediately.',
   },
   {
-    title: 'Agentic AI Workflow Design and Deployment',
-    body: 'We design and deploy autonomous AI agent systems that handle research, drafting, routing, and decision support without constant human intervention.',
+    num: '02',
+    name: 'Agentic AI Workflow Design and Deployment',
+    desc: 'We design and deploy autonomous AI agent systems that handle research, drafting, routing, and decision support without constant human intervention.',
   },
   {
-    title: 'Process Automation and Lean Optimization',
-    body: 'Combining Lean Six Sigma methodology with AI tooling, we identify waste, redesign workflows, and implement automation that compounds over time.',
+    num: '03',
+    name: 'Process Automation and Lean Optimization',
+    desc: 'Combining Lean Six Sigma methodology with AI tooling, we identify waste, redesign workflows, and implement automation that compounds over time.',
   },
   {
-    title: 'Proposal Development and Documentation Support',
-    body: 'AI-augmented proposal development for federal and commercial opportunities — faster turnaround, higher quality, and precise alignment to evaluation criteria.',
-  },
-  {
-    title: 'Data Analytics, Reporting, and Decision Intelligence',
-    body: 'We build analytics infrastructure that transforms raw operational data into dashboards and insights that drive better decisions at every level.',
-  },
-  {
-    title: 'AI Governance and Compliance Readiness',
-    body: 'We help organizations build the frameworks, policies, and documentation required to adopt AI responsibly — with specific expertise in federal compliance requirements including NIST AI RMF and CMMC.',
+    num: '04',
+    name: 'Federal Proposal Development',
+    desc: 'AI-augmented proposal development for federal opportunities — faster turnaround, higher quality, and precise alignment to evaluation criteria.',
   },
 ];
 
 export default function ServicesPage() {
   return (
-    <section className="bg-navy min-h-screen py-24 px-6">
-      <div className="max-w-6xl mx-auto">
-        <h1 className="text-white text-4xl font-bold mb-3">Our Services</h1>
-        <p className="text-gold text-lg mb-14">
-          Enterprise-grade AI consulting for federal and commercial clients.
-        </p>
-        <div className="grid md:grid-cols-2 gap-8">
-          {services.map((s, i) => (
+    <>
+      {/* ── SECTION 1: HERO ──────────────────────────────────── */}
+      <section style={{ backgroundColor: '#080e1a', padding: '120px 0 100px' }}>
+        <div
+          style={{
+            maxWidth: '1160px',
+            margin: '0 auto',
+            padding: '0 40px',
+          }}
+        >
+          <p
+            style={{
+              fontSize: '11px',
+              fontWeight: '500',
+              letterSpacing: '0.12em',
+              textTransform: 'uppercase',
+              color: '#c9a84c',
+              marginBottom: '20px',
+            }}
+          >
+            Services
+          </p>
+          <h1
+            style={{
+              fontFamily: "'Space Grotesk', sans-serif",
+              fontSize: 'clamp(36px, 5vw, 72px)',
+              fontWeight: '700',
+              letterSpacing: '-0.03em',
+              color: '#ffffff',
+              lineHeight: '1.1',
+              maxWidth: '800px',
+            }}
+          >
+            Enterprise-grade AI consulting for federal and commercial clients.
+          </h1>
+        </div>
+      </section>
+
+      {/* ── SECTION 2: SERVICE CARDS ─────────────────────────── */}
+      <section style={{ backgroundColor: '#080e1a', padding: '0 0 100px' }}>
+        <div
+          style={{
+            maxWidth: '1160px',
+            margin: '0 auto',
+            padding: '0 40px',
+            gap: '24px',
+          }}
+          className="grid grid-cols-1 md:grid-cols-2"
+        >
+          {services.map((s) => (
             <div
-              key={i}
-              className="border border-gold/30 rounded-lg p-8 flex flex-col gap-5"
+              key={s.num}
+              style={{
+                backgroundColor: '#0d1829',
+                border: '1px solid rgba(255,255,255,0.06)',
+                borderTop: '3px solid #c9a84c',
+                padding: '40px',
+              }}
             >
-              <div className="text-gold text-2xl font-bold">
-                0{i + 1}
-              </div>
-              <h3 className="text-white text-xl font-bold">{s.title}</h3>
-              <p className="text-white/70 leading-relaxed flex-1">{s.body}</p>
-              <Link
-                href="/contact"
-                className="border border-gold text-gold text-sm font-medium px-5 py-2 rounded hover:bg-gold hover:text-navy transition-colors w-fit"
+              <p
+                style={{
+                  fontSize: '12px',
+                  fontWeight: '500',
+                  letterSpacing: '0.1em',
+                  textTransform: 'uppercase',
+                  color: '#c9a84c',
+                }}
               >
-                Schedule a Consultation
-              </Link>
+                {s.num}
+              </p>
+              <h3
+                style={{
+                  fontFamily: "'Space Grotesk', sans-serif",
+                  fontSize: '22px',
+                  fontWeight: '600',
+                  color: '#ffffff',
+                  lineHeight: '1.2',
+                  marginTop: '16px',
+                }}
+              >
+                {s.name}
+              </h3>
+              <p
+                style={{
+                  fontSize: '16px',
+                  color: '#8892a4',
+                  lineHeight: '1.7',
+                  marginTop: '12px',
+                }}
+              >
+                {s.desc}
+              </p>
             </div>
           ))}
         </div>
-      </div>
-    </section>
+      </section>
+
+      {/* ── SECTION 3: BOTTOM CTA ────────────────────────────── */}
+      <section
+        style={{
+          backgroundColor: '#080e1a',
+          borderTop: '1px solid rgba(255,255,255,0.06)',
+          padding: '100px 0',
+        }}
+      >
+        <div
+          style={{
+            maxWidth: '1160px',
+            margin: '0 auto',
+            padding: '0 40px',
+            textAlign: 'center',
+          }}
+        >
+          <h2
+            style={{
+              fontFamily: "'Space Grotesk', sans-serif",
+              fontSize: '32px',
+              fontWeight: '600',
+              color: '#ffffff',
+              marginBottom: '16px',
+              letterSpacing: '-0.02em',
+            }}
+          >
+            Not sure where to start?
+          </h2>
+          <p
+            style={{
+              fontSize: '18px',
+              color: '#9aa0b0',
+              lineHeight: '1.6',
+              marginBottom: '36px',
+            }}
+          >
+            Take our free AI Readiness Assessment and get a personalized report
+            in minutes.
+          </p>
+          <Link
+            href="/assessment"
+            style={{
+              backgroundColor: '#c9a84c',
+              color: '#080e1a',
+              padding: '14px 32px',
+              fontSize: '13px',
+              fontWeight: '600',
+              letterSpacing: '0.04em',
+              borderRadius: '3px',
+              display: 'inline-block',
+              transition: 'all 0.2s ease',
+            }}
+            onMouseEnter={e => {
+              e.currentTarget.style.boxShadow = '0 0 20px rgba(201,168,76,0.35)';
+              e.currentTarget.style.transform = 'translateY(-1px)';
+            }}
+            onMouseLeave={e => {
+              e.currentTarget.style.boxShadow = 'none';
+              e.currentTarget.style.transform = 'translateY(0)';
+            }}
+          >
+            Get Your Free Assessment
+          </Link>
+        </div>
+      </section>
+    </>
   );
 }
